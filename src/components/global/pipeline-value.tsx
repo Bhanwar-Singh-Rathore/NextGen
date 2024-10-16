@@ -26,14 +26,14 @@ const PipelineValue = ({ subaccountId }: Props) => {
   const [selectedPipelineId, setselectedPipelineId] = useState('')
   const [pipelineClosedValue, setPipelineClosedValue] = useState(0)
 
-  useEffect(() => {
-    const fetchData = async () => {
-      const res = await getPipelines(subaccountId)
-      setPipelines(res)
-      setselectedPipelineId(res[0]?.id)
-    }
-    fetchData()
-  }, [subaccountId])
+  // useEffect(() => {
+  //   const fetchData = async () => {
+  //     const res = await getPipelines(subaccountId)
+  //     setPipelines(res)
+  //     setselectedPipelineId(res[0]?.id)
+  //   }
+  //   fetchData()
+  // }, [subaccountId])
 
   const totalPipelineValue = useMemo(() => {
     if (pipelines.length) {
